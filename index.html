@@ -8,8 +8,8 @@
 
             display: flex;
             flex-direction: row;
-            height: 200px;
-            margin-left: 50px;
+            height: 350px;
+            margin-left: 15px;
             gap: 450px; /* this */
 
 
@@ -17,17 +17,21 @@
 
         #logo {
             float: left;
-            width: 91px;
-            height: 84px;
+            width: 250px;
+            height: 160px;
             border-radius: 16px;
         }
         ul {
             list-style-type: none;
             display: flex;
-            align-items: stretch;
-            justify-content: space-around;
+            gap: 25px;
             width: 800px;
 
+        }
+        .pc_ol {
+            list-style-type: none;
+            padding-top: 45%;
+            padding-left: 50px;
         }
         li {
             padding: 15px;
@@ -35,17 +39,16 @@
         }
 
         section {
+            padding-top: 100px;
             display: flex;
             flex-direction: row;
-            align-items: center;
-            justify-content: space-around;
-            /*border: 1px solid red;*/
-            margin-top: 50px;
+            align-items: start;
+
+
         }
         article {
-            display: flex;
-            flex-direction: row;
-            gap: 15px; /* this */
+            width: 1200px;
+            margin: 0;
         }
 
         #textAndImages {
@@ -55,22 +58,195 @@
             /*border: 1px solid red;*/
         }
         .scaled_image {
-            float: right;
-            width: 191px;
-            height: 184px;
-            border-radius: 16px;
 
+            width: 355px;
+            height: 350px;
+
+        }
+        .info_paragraphs {
+            float: left;
+            padding-right: 15px;
+            width: 600px;
+        }
+
+        .paragraph_li {
+            font-size: 1em;
+            padding-left: 25px;
+        }
+
+        body {
+            font-family: 'Noto Sans Mono', monospace;
+            font-size: 1em;
+        }
+
+        #coockie {
+            position: fixed;
+            display: flex;
+            align-items: center;
+            background: #000fff;
+            justify-content: center;
+            bottom: 15px;
+            color: aliceblue;
+            left: 20%;
+            right: 20%;
+            border-radius: 15px;
+            padding-top: 0;
+        }
+
+        .aside_lst {
+            float: right;
+        }
+        .par_img {
+            float: right; padding-left: 5px;
+        }
+        .aside_lst_tablet_mobile {
+            visibility: hidden;
+            width: 0;
+            height: 0;
+        }
+        .paragraph_li_mobile_lap {
+            height: 0;
+        }
+        #video_style {
+            width: 100%;
+            height: 480px;
+        }
+        @media (max-width: 1240px) {
+           section {
+                padding-top: 100px;
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+            }
+            .aside_lst {
+                top: 0;
+                visibility: hidden;
+                width: 0;
+                height: 0;
+            }
+            .aside_lst_tablet_mobile {
+                visibility: visible;
+                width: 300px;
+                height: 400px;
+                padding-left: 45%;
+            }
+            .info_paragraphs {
+                padding-left: 15px;
+            }
+            article {
+                width: 100%;
+            }
+
+            .info_paragraphs {
+                float: right;
+                width: 450px
+            }
+
+            .par_img {
+                float: left;
+            }
+            header {
+                gap: 5px;
+            }
+            li {
+                padding: 15px;
+                font-size: 1em;
+
+            }
+
+            .pc_ol {
+                width: 0;
+                height: 0;
+                padding: 0;
+            }
+            .paragraph_li_pc {
+                height: 0;
+            }
+
+        }
+        @media (max-width: 480px) {
+            section {
+                padding-top: 100px;
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+            }
+            .aside_lst {
+                top: 0;
+                visibility: hidden;
+                width: 0;
+                height: 0;
+            }
+            .aside_lst_tablet_mobile {
+                visibility: visible;
+                width: 300px;
+                height: 400px;
+                padding-left: 15px;
+                list-style-type: none;
+            }
+            .info_paragraphs {
+                margin-left: 0;
+                padding-left: 15px;
+                width: 300px;
+                float: left;
+            }
+            article {
+                width: 100%;
+                display: block;
+            }
+            .par_img {
+                float: left;
+            }
+            header {
+                gap: 5px;
+            }
+            li {
+                padding: 15px;
+                font-size: 1em;
+
+            }
+
+            .pc_ol {
+
+                width: 0;
+                height: 0;
+                padding: 0;
+            }
+            .paragraph_li_pc {
+                height: 0;
+            }
+            .scaled_image {
+                width: 300px;
+                margin-right: 25px;
+                margin-left: 25px;
+            }
+
+            #video_style {
+                visibility: hidden;
+                width: 0;
+                height: 0;
+            }
+            #coockie {
+                left: 5px;
+                right: 5px;
+                width: 350px;
+
+            }
         }
 
     </style>
+
 </head>
 <body>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100;300&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <header>
     <span id="logoAndCompany" style="flex-direction: column; gap: 5px;">
-        <img src="img/AD4AE75F141C455A8615219D80BAFED3.webp" id="logo">
-        <h1>Name</h1>
-        <h2>Desc</h2>
+        <img src="img/img_4.png" id="logo">
+        <h1 style="margin-bottom: 5px">Sport technology</h1>
+        <h2 style="margin-top: 0;">We provide data</h2>
     </span>
 
     <span>
@@ -84,34 +260,84 @@
     </span>
     </header>
 
+    <span style="display: flex; flex-direction: column">
+        <aside class="aside_lst_tablet_mobile">
+                <ol class="info_paragraphs">
+                    Top 5 technologies:
+                    <li class="paragraph_li_mobile_lap">-Decision support systems</li>
+                    <li class="paragraph_li_mobile_lap">-Virtual reality (VR)</li>
+                    <li class="paragraph_li_mobile_lap">-Personalization technology</li>
+                    <li class="paragraph_li_mobile_lap">-Real time data analyzation</li>
+                    <li class="paragraph_li_mobile_lap">-Additional reality</li>
+                </ol>
+        </aside>
+        </section>
+        <video id="video_style">
+            <source src="video/hockey.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <section>
 
-    <section>
-        <span>
-            <article>
-                <video width="440" height="480" controls>
-                    <source src="video/Desktop%202022.10.30%20-%2020.28.25.08.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </article>
-         </span>
-        <span id="textAndImages">
-            <article>
-                <p>This is random words generated by me dadawdawdawd dwad nhaohj pjdwapij hf</p>
-                <img src="img/AD4AE75F141C455A8615219D80BAFED3.webp" class="scaled_image">
 
-            </article>
+            <span id="textAndImages" >
+                <article>
+                    <p class="info_paragraphs">The monitoring system for each athlete during training - Severe times, WHEN
+                        THE LOADS FOR EACH ATHLETES WERE NOT DOSED, and everyone acted on a single gain, in the past.
+                        Now doctors, physiotherapists and coaches constantly monitor each athlete on the go and select the
+                        characteristics of the load on the spot. For this, a heart rate and work intensity monitoring system
+                        has been installed, which measures the individual value of the pulse load, and also determines the
+                        boundaries of work in different power consumption modes.
+                        <a href="https://www.polar.com/en/products/accessories/polar-verity-sense">Order product</a>
+                    </p>
+                    <img src="img/img_2.png" class="scaled_image">
 
-            <article>
-                <p>This is random words generated by me dadawdawdawd dwad nhaohj pjdwapij hf</p>
-                <img src="img/AD4AE75F141C455A8615219D80BAFED3.webp" class="scaled_image">
-            </article>
+                </article>
 
-            <article>
-                <p>This is random words generated by me dadawdawdawd dwad nhaohj pjdwapij hf</p>
-                <img src="img/AD4AE75F141C455A8615219D80BAFED3.webp" class="scaled_image">
-            </article>
+                <article>
+                        <p class="info_paragraphs">
+                            3D TECHNOLOGIES HELP DOCTORS NOT ONLY DEFINE THE DIAGNOSIS AND SERIOUSITY OF DAMAGE, but
+                            also monitor the healing process and determine the timing of the athlete's return to duty.
+                            “This has long been used in Russia as well. Together with the magnetic resonance imaging, a
+                            3D image is prepared. This much more clearly demonstrates damage to the joint, it is easier
+                            to build a treatment method, ”confirms sports doctor Eduard Bezuglov.
+                        </p>
+                        <img src="img/img_5.png" class="scaled_image">
+                </article>
+
+                <article>
+                    <p class="info_paragraphs">X-RAY EXAM: BONE AGE STUDY IS USED IN THE RARE TIMES when federations have
+                        doubts about the real age of athletes: as a rule, this applies to people from Africa and Arab
+                        countries, where they often change the date of birth in the passport in order to have a good chance
+                        of getting into to a decent club or national team of his age. The test technology is simple: the
+                        athlete undergoes a standard magnetic resonance imaging, only first a picture of the whole body is
+                        taken, and then a picture of both hands is taken. After that, doctors determine the age of a person
+                        by special signs, however, they don’t tell exactly what these signs are.
+                        <a href="https://www.betterhealth.vic.gov.au/health/conditionsandtreatments/x-ray-examinations">More info..</a>
+                    </p>
+                    <img src="img/img_3.png" class="scaled_image">
+                </article>
+
+
         </span>
+        <aside class="aside_lst">
+                <ol class="pc_ol" style="">
+                    Top 5 technologies:
+                    <li class="paragraph_li_pc">-Decision support systems</li>
+                    <li class="paragraph_li_pc">-Virtual reality (VR)</li>
+                    <li class="paragraph_li_pc">-Personalization technology</li>
+                    <li class="paragraph_li_pc">-Real time data analyzation</li>
+                    <li class="paragraph_li_pc">-Additional reality</li>
+                </ol>
+        </aside>
+        </section>
 
+    </span>
+
+    <footer style="height: 100px">
+        <p style="padding-left: 115px; position: absolute; margin-top: 0">&#169; Gleb Meshkov</p>
+    </footer>
+    <section id="coockie">
+        <p>Cookie statement</p>
     </section>
 </body>
 </html>
