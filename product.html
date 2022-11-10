@@ -1,10 +1,481 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        header, #logoAndCompany{
+
+            display: flex;
+            flex-direction: row;
+            height: 350px;
+            margin-left: 15px;
+            gap: 450px; /* this */
+
+
+        }
+
+        #logo {
+            float: left;
+            width: 250px;
+            height: 160px;
+            border-radius: 16px;
+        }
+        ul {
+            list-style-type: none;
+            display: flex;
+            gap: 25px;
+            width: 800px;
+
+        }
+        .pc_ol {
+            list-style-type: none;
+            padding-top: 45%;
+            padding-left: 50px;
+        }
+        li {
+            padding: 15px;
+            font-size: 1.5em;
+        }
+
+        section {
+
+            display: grid;
+            gap: 10px;
+            grid-auto-rows: minmax(100px, auto);
+
+        }
+
+        #first {
+            grid-column: 2;
+            grid-row: 4;
+        }
+        #second {
+            grid-column: 1;
+            grid-row: 1;
+        }
+        #fourth {
+            grid-column: 3;
+            grid-row: 6;
+        }
+        #fifth {
+            grid-column: 1;
+            grid-row: 5;
+        }
+        #third {
+            grid-column: 3;
+            grid-row: 3;
+         }
+        #sixth {
+            grid-column: 2;
+            grid-row: 7;
+        }
+
+
+        #textAndImages {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            /*border: 1px solid red;*/
+        }
+        .scaled_image {
+
+            height: 350px;
+
+        }
+        .info_paragraphs {
+            float: left;
+            padding-right: 15px;
+            width: 600px;
+        }
+
+        .paragraph_li {
+            font-size: 1em;
+            padding-left: 25px;
+        }
+
+        body {
+            font-family: 'Noto Sans Mono', monospace;
+            font-size: 1em;
+            background: #181818;
+            color: #FFFFFF;
+        }
+
+        #coockie {
+            position: fixed;
+            display: flex;
+            align-items: center;
+            background: #000fff;
+            justify-content: center;
+            bottom: 15px;
+            color: aliceblue;
+            left: 20%;
+            right: 20%;
+            border-radius: 15px;
+            padding-top: 0;
+        }
+
+        .nav-bar {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+            position: relative;
+            background-color: #181818;
+            padding: 12px 20px;
+        }
+        .menu {display: flex;}
+        .menu li {padding-left: 1px;}
+        .menu li a {
+            display: inline-block;
+            text-decoration: none;
+            color: #FFF;
+            text-align: center;
+            transition: 0.15s ease-in-out;
+            position: relative;
+            text-transform: uppercase;
+        }
+        .menu li a::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: #FFF;
+            transition: 0.15s ease-in-out;
+        }
+        .menu li a:hover:after {width: 100%;}
+        .open-menu , .close-menu {
+            position: absolute;
+            color: #FFF;
+            cursor: pointer;
+            font-size: 1.5rem;
+            display: none;
+        }
+        .open-menu {
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+        }
+        .close-menu {
+            top: 20px;
+            left: 20px;
+        }
+        #check {display: block; z-index: 1000}
+
+        #product_1 {
+            float: right;
+        }
+
+        #product_2 {
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        #product_3 {
+            float: left;
+        }
+
+        #asides {
+            display: flex;
+        }
+        @media (max-width: 1240px) {
+            #first {
+                grid-row: 1;
+                grid-column: 1;
+            }
+            #second {
+                grid-row: 3;
+                grid-column: 2;
+            }
+            #third {
+                grid-row: 4;
+                grid-column: 1;
+            }
+            #fifth {
+                grid-row: 5;
+                grid-column: 2;
+            }
+            #sixth {
+                grid-row: 6;
+                grid-column: 1;
+            }
+            #fourth {
+                grid-row: 1;
+                grid-column: 1;
+                visibility: hidden;
+            }
+
+            #product_2 {
+                float: right;
+                margin: 0;
+            }
+            #product_3 {
+                float: left;
+                visibility: hidden;
+                height: 0;
+                width: 0;
+            }
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+            section {
+                margin-top: 50px;
+            }
+            .nav-bar {
+                justify-content: start;
+            }
+            #check {display: none; z-index: 1000}
+
+            #img_3 {
+                width: 0;
+                height: 0;
+            }
+            #product_aside {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            #asides {
+               padding-left: 80px;
+
+            }
+
+        }
+        @media (max-width: 480px) {
+
+            #fifth {
+                grid-row: 1;
+                grid-column: 1;
+            }
+            #third {
+                grid-column: 1;
+                grid-row: 3;
+            }
+            #second {
+                grid-column: 1;
+                grid-row: 5;
+            }
+            #first {
+                grid-column: 1;
+                grid-row: 7;
+            }
+            #fourth {
+                grid-row: 1;
+                grid-column: 1;
+                visibility: hidden;
+                width: 0;
+                height: 0;
+            }
+            #sixth {
+                grid-row: 1;
+                grid-column: 1;
+                visibility: hidden;
+                width: 0;
+                height: 0;
+            }
+            header {
+                gap: 5px;
+                width: 250px;
+            }
+            li {
+                padding: 15px;
+                font-size: 1em;
+
+            }
+
+            .scaled_image {
+                width: 100%;
+
+            }
+            #coockie {
+                left: 5%;
+                width: 40%;
+
+            }
+            .menu {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 80%;
+                height: 100vh;
+                position: fixed;
+                top: 0;
+                left: -100%;
+                z-index: 100;
+                background-color: #181818;
+                transition: all 0.2s ease-in-out;
+            }
+            #asides {
+                padding-left: 0;
+                flex-direction: column;
+            }
+            #product_3 {
+                visibility: visible;
+                width: 100%;
+                height: auto;
+            }
+            #img_3 {
+                visibility: visible;
+                width: 250px;
+                height: 150px;
+            }
+            #img_2 {
+                width: 250px;
+                height: 150px;
+            }
+            #img_1 {
+                width: 250px;
+                height: 150px;
+            }
+            .scaled_image {
+                width: 250px;
+                height: 150px;
+            }
+            body {
+                font-size: 0.5em;
+            }
+            .info_paragraphs {
+                width: 250px;
+            }
+            section {
+                width: 250px;
+            }
+            #logo {
+                width: 150px;
+                height: 100px;
+            }
+            header {
+                flex-direction: row;
+            }
+            #check {display: flex}
+            .menu li {margin-top: 40px;}
+            .menu li a {padding: 10px;}
+            .open-menu , .close-menu {display: block;}
+            #check:checked ~ .menu {left: 0;}
+
+
+        }
+
+
+
+    </style>
+
 </head>
 <body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100;300&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<header>
+        <span id="logoAndCompany" style="flex-direction: column; gap: 5px;">
+        <img src="img/img_4.png" id="logo">
+        <h1 style="margin-bottom: 5px">Sport technology</h1>
+        <h2 style="margin-top: 0;">We provide data</h2>
+    </span>
+    <nav>
+        <ul class='nav-bar'>
+            <input type='checkbox' id='check' />
+            <span class="menu">
+                <li><a href="">Home</a></li>
+                <li><a href="">Products</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+                <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+            </span>
+            <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+        </ul>
+    </nav>
+</header>
 
+<section>
+    <article id="first">
+        <p class="info_paragraphs">The use of virtual reality in various areas of life is growing steadily every year.
+            Sports are no exception. The use of the possibilities of virtual reality in sports, including elite sports,
+            has its advantages, but at the same time, its disadvantages, which will be discussed in this paper.</p>
+        <img class="scaled_image" src="img/img_6.png">
+    </article>
+
+    <artcile id="second">
+        <p class="info_paragraphs">It is shown that the use of virtual reality technologies in sports has a whole range
+            of advantages. They are due, in particular, to the removal of a number of restrictions imposed by real
+            sports conditions. These technologies make it possible to prevent injury to athletes, allow the creation of
+            any environmental conditions (weather, humidity), simulate different levels of training of rivals, and much
+            more. Using the possibilities of virtual reality allows athletes not to depend on equipment, weather or
+            competition venue, therefore they provide an opportunity to engage in hard-to-reach and expensive sports.</p>
+        <img class="scaled_image" src="img/img_7.png">
+    </artcile>
+
+    <article id="third">
+        <p class="info_paragraphs">Starting this year, a training program has been launched for junior American football
+            teams that allows using VR to demonstrate what happens with traumatic brain injuries, demonstrate the
+            symptoms of a concussion and help young athletes recognize them in a timely manner. The program is called
+            CrashCourse and is run jointly by American Youth Football & Cheer and TeachAids.</p>
+        <img class="scaled_image" src="img/img_8.png">
+    </article>
+
+    <artcile id="fourth">
+        <p class="info_paragraphs">Many remember that the 2018 BBC already used AR and VR technology to broadcast the
+            World Cup. Viewers got a 360-degree view of the game. The British football club Liverpool is working on a
+            similar project. The club's administration understands that even in stadiums with thousands of people there
+            is not always enough space for all the fans, and not all seats are successful. The club thought about using
+            VR for more efficient broadcasting of the match. It is clear that the fan base will be able to experience
+            stadium-like experiences with VR, and perhaps even stronger, as the filming will be done from better vantage
+            points.</p>
+        <img class="scaled_image" src="img/img_9.png">
+    </artcile>
+
+    <artcile id="fifth">
+        <p class="info_paragraphs">Thus, today we can state with certainty that virtual reality technologies most likely
+            will not be able to completely replace the stands and the live presence of fans, but will significantly
+            unload the stadiums. Also, systems based on the principles of augmented and virtual reality will help
+            organize the training process more efficiently, which, obviously, can improve sports results, add to the
+            entertainment of existing sports, and, possibly, accelerate the emergence of new world records.</p>
+        <img class="scaled_image" src="img/img_10.png">
+    </artcile>
+
+    <article id="sixth">
+        <p class="info_paragraphs">Despite the conviction of skeptical citizens that stadiums are eternal and VR will
+            never replace them, it can already be stated today that glasses will soon compete with noisy and cramped
+            arenas. AR is also increasingly becoming part of the practice of both the training process and sports
+            marketing, and its use in refereeing is no longer considered something new.</p>
+        <img class="scaled_image" src="img/img_11.png">
+    </article>
+
+
+</section>
+<span id="asides">
+    <aside id="product_1">
+        <article >
+            <a href="https://www.inholland.nl/">
+                <img class="scaled_image"  src="img/img_12.png" id="img_1">
+            </a>
+        </article>
+    </aside>
+    <aside id="product_2">
+        <article >
+            <a href="https://www.inholland.nl/">
+                <img class="scaled_image"  src="img/img_13.png" id="img_2">
+            </a>
+        </article>
+    </aside>
+    <aside id="product_3">
+        <article >
+            <a href="https://www.inholland.nl/">
+                <img class="scaled_image"  src="img/img_14.png" id="img_3">
+            </a>
+        </article>
+    </aside>
+</span>
+<footer style="height: 100px">
+    <p style="padding-left: 115px; position: absolute; margin-top: 0">&#169; Gleb Meshkov</p>
+</footer>
+<section id="coockie">
+    <p>Cookie statement</p>
+</section>
 </body>
 </html>
