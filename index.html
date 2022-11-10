@@ -77,6 +77,8 @@
         body {
             font-family: 'Noto Sans Mono', monospace;
             font-size: 1em;
+            background: #181818;
+            color: #FFFFFF;
         }
 
         #coockie {
@@ -111,6 +113,55 @@
             width: 100%;
             height: 480px;
         }
+        .nav-bar {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+            position: relative;
+            background-color: #181818;
+            padding: 12px 20px;
+        }
+        .menu {display: flex;}
+        .menu li {padding-left: 1px;}
+        .menu li a {
+            display: inline-block;
+            text-decoration: none;
+            color: #FFF;
+            text-align: center;
+            transition: 0.15s ease-in-out;
+            position: relative;
+            text-transform: uppercase;
+        }
+        .menu li a::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: #FFF;
+            transition: 0.15s ease-in-out;
+        }
+        .menu li a:hover:after {width: 100%;}
+        .open-menu , .close-menu {
+            position: absolute;
+            color: #FFF;
+            cursor: pointer;
+            font-size: 1.5rem;
+            display: none;
+        }
+        .open-menu {
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+        }
+        .close-menu {
+            top: 20px;
+            left: 20px;
+        }
+        #check {display: flex; z-index: 1000}
         @media (max-width: 1240px) {
            section {
                 padding-top: 100px;
@@ -232,7 +283,27 @@
                 width: 350px;
 
             }
+            .menu {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 80%;
+                height: 100vh;
+                position: fixed;
+                top: 0;
+                left: -100%;
+                z-index: 100;
+                background-color: #181818;
+                transition: all 0.2s ease-in-out;
+            }
+            .menu li {margin-top: 40px;}
+            .menu li a {padding: 10px;}
+            .open-menu , .close-menu {display: block;}
+            #check:checked ~ .menu {left: 0;}
+
         }
+
+
 
     </style>
 
@@ -243,21 +314,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100;300&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <header>
-    <span id="logoAndCompany" style="flex-direction: column; gap: 5px;">
+        <span id="logoAndCompany" style="flex-direction: column; gap: 5px;">
         <img src="img/img_4.png" id="logo">
         <h1 style="margin-bottom: 5px">Sport technology</h1>
         <h2 style="margin-top: 0;">We provide data</h2>
     </span>
-
-    <span>
         <nav>
-        <ul>
-            <li>Products</li>
-            <li>Pricing</li>
-            <li>Contact</li>
-        </ul>
-    </nav>
-    </span>
+            <ul class='nav-bar'>
+                <input type='checkbox' id='check' />
+                <span class="menu">
+                <li><a href="">Home</a></li>
+                <li><a href="">Products</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+                <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+            </span>
+                <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+            </ul>
+        </nav>
     </header>
 
     <span style="display: flex; flex-direction: column">
