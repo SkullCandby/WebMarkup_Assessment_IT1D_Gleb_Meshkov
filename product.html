@@ -39,10 +39,10 @@
         }
 
         section {
-
+            width: 100%;
             display: grid;
             gap: 10px;
-            grid-auto-rows: minmax(100px, auto);
+
 
         }
 
@@ -79,14 +79,13 @@
             /*border: 1px solid red;*/
         }
         .scaled_image {
-
             height: 350px;
 
         }
         .info_paragraphs {
             float: left;
-            padding-right: 15px;
-            width: 600px;
+
+            width: 100%;
         }
 
         .paragraph_li {
@@ -181,7 +180,16 @@
         #asides {
             display: flex;
         }
+        #check {
+            display: none;
+        }
         @media (max-width: 1240px) {
+            section {
+                grid-template-columns: 49% 49%;
+            }
+            #img_p_5 {
+                width: 100%;
+            }
             #first {
                 grid-row: 1;
                 grid-column: 1;
@@ -211,6 +219,16 @@
             #product_2 {
                 float: right;
                 margin: 0;
+                width: 50%;
+            }
+            #product_1 {
+                width: 50%;
+            }
+            #img_1 {
+                width: 100%;
+            }
+            #img_2 {
+                width: 100%;
             }
             #product_3 {
                 float: left;
@@ -239,10 +257,12 @@
                 align-items: center;
                 justify-content: center;
             }
-            #asides {
-               padding-left: 80px;
-
+            #coockie {
+                left:5%;
+                right: 5%;
+                width: 80%;
             }
+
 
         }
         @media (max-width: 480px) {
@@ -320,29 +340,30 @@
             }
             #img_3 {
                 visibility: visible;
-                width: 250px;
-                height: 150px;
+                width: 100%;
+                height: 250px;
             }
             #img_2 {
-                width: 250px;
-                height: 150px;
+                width: 100%;
+                height: 250px;
             }
             #img_1 {
-                width: 250px;
-                height: 150px;
+                width: 100%;
+                height: 250px;
             }
             .scaled_image {
-                width: 250px;
-                height: 150px;
+                width: 100%;
+                height: 250px;
             }
             body {
                 font-size: 0.5em;
             }
             .info_paragraphs {
-                width: 250px;
+                width: 100%;
+                text-align: center;
             }
             section {
-                width: 250px;
+                width: 100%;
             }
             #logo {
                 width: 150px;
@@ -351,12 +372,19 @@
             header {
                 flex-direction: row;
             }
-            #check {display: flex}
+            #check {display: none}
             .menu li {margin-top: 40px;}
             .menu li a {padding: 10px;}
             .open-menu , .close-menu {display: block;}
             #check:checked ~ .menu {left: 0;}
-
+            #img_p_4 {
+                width: 0;
+                height: 0;
+            }
+            #img_p_6 {
+                width: 0;
+                height: 0;
+            }
 
         }
 
@@ -380,14 +408,13 @@
         <ul class='nav-bar'>
             <input type='checkbox' id='check' />
             <span class="menu">
-                <li><a href="">Home</a></li>
-                <li><a href="">Products</a></li>
-                <li><a href="">Services</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Contact</a></li>
-                <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="product.html" style="background: chocolate">Product</a></li>
+                <label for="check" class="close-menu">&equiv;</i></label>
             </span>
-            <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+            <label for="check" class="open-menu">&equiv;</i></label>
         </ul>
     </nav>
 </header>
@@ -397,7 +424,7 @@
         <p class="info_paragraphs">The use of virtual reality in various areas of life is growing steadily every year.
             Sports are no exception. The use of the possibilities of virtual reality in sports, including elite sports,
             has its advantages, but at the same time, its disadvantages, which will be discussed in this paper.</p>
-        <img class="scaled_image" src="img/img_6.png">
+        <img class="scaled_image" src="img/img_6.png" id="img_p_1">
     </article>
 
     <artcile id="second">
@@ -407,7 +434,7 @@
             any environmental conditions (weather, humidity), simulate different levels of training of rivals, and much
             more. Using the possibilities of virtual reality allows athletes not to depend on equipment, weather or
             competition venue, therefore they provide an opportunity to engage in hard-to-reach and expensive sports.</p>
-        <img class="scaled_image" src="img/img_7.png">
+        <img class="scaled_image" src="img/img_7.png" id="img_p_2">
     </artcile>
 
     <article id="third">
@@ -415,7 +442,7 @@
             teams that allows using VR to demonstrate what happens with traumatic brain injuries, demonstrate the
             symptoms of a concussion and help young athletes recognize them in a timely manner. The program is called
             CrashCourse and is run jointly by American Youth Football & Cheer and TeachAids.</p>
-        <img class="scaled_image" src="img/img_8.png">
+        <img class="scaled_image" src="img/img_8.png" id="img_p_3">
     </article>
 
     <artcile id="fourth">
@@ -426,7 +453,7 @@
             VR for more efficient broadcasting of the match. It is clear that the fan base will be able to experience
             stadium-like experiences with VR, and perhaps even stronger, as the filming will be done from better vantage
             points.</p>
-        <img class="scaled_image" src="img/img_9.png">
+        <img class="scaled_image" src="img/img_9.png" id="img_p_4">
     </artcile>
 
     <artcile id="fifth">
@@ -435,7 +462,7 @@
             unload the stadiums. Also, systems based on the principles of augmented and virtual reality will help
             organize the training process more efficiently, which, obviously, can improve sports results, add to the
             entertainment of existing sports, and, possibly, accelerate the emergence of new world records.</p>
-        <img class="scaled_image" src="img/img_10.png">
+        <img class="scaled_image" src="img/img_10.png" id="img_p_5">
     </artcile>
 
     <article id="sixth">
@@ -443,7 +470,7 @@
             never replace them, it can already be stated today that glasses will soon compete with noisy and cramped
             arenas. AR is also increasingly becoming part of the practice of both the training process and sports
             marketing, and its use in refereeing is no longer considered something new.</p>
-        <img class="scaled_image" src="img/img_11.png">
+        <img class="scaled_image" src="img/img_11.png" id="img_p_6">
     </article>
 
 

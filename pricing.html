@@ -149,6 +149,7 @@
             flex-direction: column;
             float: right;
         }
+        #check {display: none;}
         @media (max-width: 1240px) {
 
             #product_3 {
@@ -299,7 +300,7 @@
             table {
                 margin-top: 0;
             }
-            #check {display: flex}
+            #check {display: none}
             .menu li {margin-top: 40px;}
             .menu li a {padding: 10px;}
             .open-menu , .close-menu {display: block;}
@@ -328,14 +329,13 @@
         <ul class='nav-bar'>
             <input type='checkbox' id='check' />
             <span class="menu">
-                <li><a href="">Home</a></li>
-                <li><a href="">Products</a></li>
-                <li><a href="">Services</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Contact</a></li>
-                <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pricing.html" style="background: chocolate">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="product.html">Product</a></li>
+                <label for="check" class="close-menu">&equiv;</i></label>
             </span>
-            <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+            <label for="check" class="open-menu">&equiv;</label>
         </ul>
     </nav>
 </header>

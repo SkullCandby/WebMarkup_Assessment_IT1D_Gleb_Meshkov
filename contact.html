@@ -73,14 +73,15 @@
         }
 
         .nav-bar {
-            width: 100%;
+            width: 100px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             list-style: none;
             position: relative;
             background-color: #181818;
-            padding: 12px 20px;
+            padding: 0;
+
         }
         .menu {display: flex;}
         .menu li {padding-left: 1px;}
@@ -92,6 +93,7 @@
             transition: 0.15s ease-in-out;
             position: relative;
             text-transform: uppercase;
+
         }
         .menu li a::after {
             content: "";
@@ -144,7 +146,7 @@
             flex-direction: column;
             justify-content: space-around;
             align-items: center;
-            width: 400px;
+            width: 100%;
             height: 400px;
         }
         textarea {
@@ -172,12 +174,12 @@
         #check {display: none;}
         @media (max-width: 1240px) {
             section {
-                margin-left: 150px;
-                margin-top: 150px;
+                margin-top: 150px
             }
             #asides {
                 width: 200px;
             }
+
             #product_3 {
                 float: right;
                 margin: 0;
@@ -197,8 +199,9 @@
                 width: 0;
             }
             #coockie {
-                margin-left: 5%;
-                width: 30%;
+                margin-left: 10%;
+                margin-right: 10%;
+                width: 40%;
             }
             header {
                 flex-direction: column;
@@ -215,6 +218,9 @@
                 margin-right: auto;
                 width: 100%;
                 margin-top: 100px;
+            }
+            #img_1 {
+                width: 0;
             }
 
         }
@@ -239,7 +245,8 @@
 
             }
             #coockie {
-
+                margin-left: 10%;
+                margin-right: 10%;
                 width: 40%;
 
             }
@@ -261,24 +268,31 @@
                 flex-direction: column;
                 margin-left: auto;
                 margin-right: auto;
+                width: 100%;
             }
             #product_1 {
                 visibility: visible;
                 width: 100%;
                 height: auto;
             }
+            #product_2 {
+                width: 100%;
+            }
+            #product_1 {
+                width: 100%;
+            }
             #img_3 {
                 visibility: visible;
-                width: 250px;
-                height: 150px;
+                width: 100%;
+                height: 250px;
             }
             #img_2 {
-                width: 250px;
-                height: 150px;
+                width: 100%;
+                height: 250px;
             }
             #img_1 {
-                width: 250px;
-                height: 150px;
+                width: 100%;
+                height: 250px;
             }
             .scaled_image {
                 width: 250px;
@@ -301,7 +315,7 @@
                 flex-direction: row;
             }
 
-            #check {display: flex}
+            #check {display: none}
             .menu li {margin-top: 40px;}
             .menu li a {padding: 10px;}
             .open-menu , .close-menu {display: block;}
@@ -330,14 +344,13 @@
         <ul class='nav-bar'>
             <input type='checkbox' id='check' />
             <span class="menu">
-                <li><a href="">Home</a></li>
-                <li><a href="">Products</a></li>
-                <li><a href="">Services</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Contact</a></li>
-                <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html" style="background: chocolate">Contact</a></li>
+                <li><a href="product.html">Product</a></li>
+                <label for="check" class="close-menu">&equiv;</label>
             </span>
-            <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+            <label for="check" class="open-menu" style="width: 50px; height: 50px">&equiv;</label>
         </ul>
     </nav>
 </header>
@@ -355,7 +368,7 @@
     <span id="asides">
         <aside id="product_1">
             <article >
-                <a href="https://www.inholland.nl/">
+                <a href="https://www.inholland.nl/" style="width: 100%">
                     <img class="scaled_image"  src="img/img_12.png" id="img_1">
                 </a>
             </article>
