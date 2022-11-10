@@ -1,10 +1,514 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        header, #logoAndCompany{
+
+            display: flex;
+            flex-direction: row;
+            height: 350px;
+            margin-left: 15px;
+            gap: 450px; /* this */
+
+
+        }
+
+        #logo {
+            float: left;
+            width: 250px;
+            height: 160px;
+            border-radius: 16px;
+        }
+        ul {
+            list-style-type: none;
+            display: flex;
+            gap: 25px;
+            width: 800px;
+
+        }
+        .pc_ol {
+            list-style-type: none;
+            padding-top: 45%;
+            padding-left: 50px;
+        }
+        li {
+            padding: 15px;
+            font-size: 1.5em;
+        }
+
+        section {
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+
+
+        }
+
+        .scaled_image {
+
+            height: 350px;
+
+        }
+
+        body {
+            font-family: 'Noto Sans Mono', monospace;
+            font-size: 1em;
+            background: #181818;
+            color: #FFFFFF;
+        }
+        table, th, td {
+            border: 1px solid;
+        }
+        table {
+            width: 100%;
+        }
+        #coockie {
+            position: fixed;
+            display: flex;
+            align-items: center;
+            background: #000fff;
+            justify-content: center;
+            bottom: 15px;
+            color: aliceblue;
+            left: 20%;
+            right: 20%;
+            border-radius: 15px;
+            padding-top: 0;
+        }
+
+        .nav-bar {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+            position: relative;
+            background-color: #181818;
+            padding: 12px 20px;
+        }
+        .menu {display: flex;}
+        .menu li {padding-left: 1px;}
+        .menu li a {
+            display: inline-block;
+            text-decoration: none;
+            color: #FFF;
+            text-align: center;
+            transition: 0.15s ease-in-out;
+            position: relative;
+            text-transform: uppercase;
+        }
+        .menu li a::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: #FFF;
+            transition: 0.15s ease-in-out;
+        }
+        .menu li a:hover:after {width: 100%;}
+        .open-menu , .close-menu {
+            position: absolute;
+            color: #FFF;
+            cursor: pointer;
+            font-size: 1.5rem;
+            display: none;
+        }
+        .open-menu {
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+        }
+        .close-menu {
+            top: 20px;
+            left: 20px;
+        }
+        #check {display: block; z-index: 1000}
+
+        #product_1 {
+            float: left;
+            width: 100%;
+        }
+
+        #product_2 {
+            float: left;
+            width: 100%;
+        }
+
+        #product_3 {
+            float: left;
+            width: 100%;
+        }
+
+        #asides {
+            display: flex;
+            flex-direction: column;
+            float: right;
+        }
+        @media (max-width: 1240px) {
+
+            #product_3 {
+                float: right;
+                margin: 0;
+                width: 50%;
+            }
+            #product_2 {
+                width: 50%;
+            }
+            #product_1 {
+                float: left;
+                visibility: hidden;
+                height: 0;
+                width: 0;
+            }
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+            section {
+                flex-direction: column;
+                width: 100%;
+            }
+            .nav-bar {
+                justify-content: start;
+            }
+            #check {display: none; z-index: 1000}
+
+            #img_1 {
+                width: 0;
+                height: 0;
+            }
+
+            #img_2 {
+                width: 100%;
+            }
+            #img_3{
+                width: 100%;
+            }
+            #product_aside {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            #asides {
+                flex-direction: row;
+                align-items: center;
+                justify-items: center;
+                width: 100%;
+
+            }
+            table {
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 100px;
+            }
+            #coockie {
+                left: 5%;
+                right: 5%;
+                width: 90%;
+            }
+
+        }
+        @media (max-width: 480px) {
+
+            header {
+                gap: 5px;
+                width: 250px;
+            }
+            li {
+                padding: 15px;
+                font-size: 1em;
+
+            }
+
+            .scaled_image {
+                width: 450px;
+
+            }
+            #coockie {
+                left: 5%;
+                width: 40%;
+
+            }
+            .menu {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 80%;
+                height: 100vh;
+                position: fixed;
+                top: 0;
+                left: -100%;
+                z-index: 100;
+                background-color: #181818;
+                transition: all 0.2s ease-in-out;
+            }
+            #asides {
+                padding-left: 0;
+                flex-direction: column;
+            }
+            #product_1 {
+                visibility: visible;
+                width: 100%;
+                height: auto;
+            }
+            #product_2 {
+                width: 100%;
+            }
+            #product_3 {
+                width: 100%;
+            }
+            #img_3 {
+                visibility: visible;
+                width: 100%;
+                height: 150px;
+            }
+            #img_2 {
+                width: 100%;
+                height: 150px;
+            }
+            #img_1 {
+                width: 100%;
+                height: 150px;
+            }
+            .scaled_image {
+                width: 100%;
+                height: 150px;
+            }
+            body {
+                font-size: 0.5em;
+            }
+            .info_paragraphs {
+                width: 250px;
+            }
+            section {
+                width: 100%;
+            }
+            #logo {
+                width: 150px;
+                height: 100px;
+            }
+            header {
+                flex-direction: row;
+            }
+            #check {display: flex}
+            .menu li {margin-top: 40px;}
+            .menu li a {padding: 10px;}
+            .open-menu , .close-menu {display: block;}
+            #check:checked ~ .menu {left: 0;}
+
+
+        }
+
+
+
+    </style>
+
 </head>
 <body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100;300&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<header>
+        <span id="logoAndCompany" style="flex-direction: column; gap: 5px;">
+        <img src="img/img_4.png" id="logo">
+        <h1 style="margin-bottom: 5px">Sport technology</h1>
+        <h2 style="margin-top: 0;">We provide data</h2>
+    </span>
+    <nav>
+        <ul class='nav-bar'>
+            <input type='checkbox' id='check' />
+            <span class="menu">
+                <li><a href="">Home</a></li>
+                <li><a href="">Products</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+                <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+            </span>
+            <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+        </ul>
+    </nav>
+</header>
 
+<section>
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>Price</td>
+            <td>Company</td>
+            <td>Year</td>
+            <td>Garanty</td>
+        </tr>
+        <tr>
+            <td>Z VR Backpack G2 Workstation</td>
+            <td>&euro; 1.999,00</td>
+            <td>HP</td>
+            <td>2021</td>
+            <td>2 years</td>
+        </tr>
+        <tr>
+            <td>Quest 2</td>
+            <td>&euro; 449</td>
+            <td>Meta</td>
+            <td>2019</td>
+            <td>1 year</td>
+        </tr>
+        <tr>
+            <td>M2 Pro</td>
+            <td>&euro; 65,99</td>
+            <td>BOBOVR </td>
+            <td>2020</td>
+            <td>30 days</td>
+        </tr>
+        <tr>
+            <td>VIVE Flow</td>
+            <td>&euro; 554</td>
+            <td>HTC </td>
+            <td>2020</td>
+            <td>6 months</td>
+        </tr>
+        <tr>
+            <td>VR Headset charge kast 20</td>
+            <td>&euro; 1595</td>
+            <td>Zioxi </td>
+            <td>2021</td>
+            <td>1 year</td>
+        </tr>
+        <tr>
+            <td>Vive Pro 2 Full Kit</td>
+            <td>&euro; 1349</td>
+            <td>HTC </td>
+            <td>2022</td>
+            <td>7 months</td>
+        </tr>
+        <tr>
+            <td>Ignite 3</td>
+            <td>&euro; 329</td>
+            <td>Polar </td>
+            <td>2021</td>
+            <td>30 days</td>
+        </tr>
+        <tr>
+            <td>Pacer Pro</td>
+            <td>&euro; 299.90</td>
+            <td>Polar</td>
+            <td>2022</td>
+            <td>30 days</td>
+        </tr>
+        <tr>
+            <td>Pacer</td>
+            <td>&euro; 199.90</td>
+            <td>Polar</td>
+            <td>2020</td>
+            <td>30 days</td>
+        </tr>
+        <tr>
+            <td>Vantage V2</td>
+            <td>&euro; 499</td>
+            <td>Polar </td>
+            <td>2021</td>
+            <td>2 months</td>
+        </tr>
+        <tr>
+            <td>Verity Sense</td>
+            <td>&euro; 89</td>
+            <td>Polar </td>
+            <td>2022</td>
+            <td>6 months</td>
+        </tr>
+        <tr>
+            <td>H10</td>
+            <td>&euro; 89</td>
+            <td>Polar</td>
+            <td>2022</td>
+            <td>2 months</td>
+        </tr>
+        <tr>
+            <td>FKM-Fusion Wristband, 22mm</td>
+            <td>&euro; 59</td>
+            <td>Polar</td>
+            <td>2021</td>
+            <td>1 month</td>
+        </tr>
+        <tr>
+            <td>Woven Wristband, 22mm</td>
+            <td>&euro; 39</td>
+            <td>Polar</td>
+            <td>2022</td>
+            <td>2 mounths</td>
+        </tr>
+        <tr>
+            <td>H9</td>
+            <td>&euro; 59</td>
+            <td>Polar </td>
+            <td>2022</td>
+            <td>2 mounths</td>
+        </tr>
+        <tr>
+            <td>OH1+</td>
+            <td>&euro; 59</td>
+            <td>Polar</td>
+            <td>2022</td>
+            <td>1 mounth</td>
+        </tr>
+        <tr>
+            <td>Universal VR Suitcase</td>
+            <td>&euro; 339</td>
+            <td>Govark</td>
+            <td>2022</td>
+            <td>6 mounths</td>
+        </tr>
+        <tr>
+            <td>Exos 2</td>
+            <td>&euro; 14</td>
+            <td>Trust </td>
+            <td>2021</td>
+            <td>1 mounth</td>
+        </tr>
+        <tr>
+            <td>VR HEADSET HOUDER</td>
+            <td>&euro; 46</td>
+            <td>Oculus</td>
+            <td>2020</td>
+            <td>15 days;</td>
+        </tr>
+    </table>
+<span id="asides">
+    <aside id="product_1">
+        <article >
+            <a href="https://www.inholland.nl/">
+                <img class="scaled_image"  src="img/img_12.png" id="img_1">
+            </a>
+        </article>
+    </aside>
+    <aside id="product_2">
+        <article >
+            <a href="https://www.inholland.nl/">
+                <img class="scaled_image"  src="img/img_13.png" id="img_2">
+            </a>
+        </article>
+    </aside>
+    <aside id="product_3">
+        <article >
+            <a href="https://www.inholland.nl/">
+                <img class="scaled_image"  src="img/img_14.png" id="img_3">
+            </a>
+        </article>
+    </aside>
+</span>
+</section>
+
+<footer style="height: 100px">
+    <p style="padding-left: 115px; position: absolute; margin-top: 0">&#169; Gleb Meshkov</p>
+</footer>
+<section id="coockie">
+    <p>Cookie statement</p>
+</section>
 </body>
 </html>
