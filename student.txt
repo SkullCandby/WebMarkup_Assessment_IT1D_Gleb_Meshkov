@@ -1,0 +1,5 @@
+Student name: Gleb Meshkov
+Student number: 698924
+Student class: IT1D
+URL student GitHub website: your GitHub URL (looks like https://username.github.io )
+URL student GitHub repository: https://github.com/SkullCandby/WebMarkup_Assessment_IT1D_Gleb_Meshkov
