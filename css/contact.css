@@ -8,6 +8,10 @@ header, #logoAndCompany{
 
 
 }
+
+footer {
+    margin-top: 100px;
+}
 #img_1 {
     width: 100%;
 }
