@@ -7,10 +7,9 @@
         header, #logoAndCompany{
 
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             height: 350px;
             margin-left: 15px;
-            gap: 450px; /* this */
 
 
         }
@@ -85,14 +84,16 @@
             position: fixed;
             display: flex;
             align-items: center;
-            background: #000fff;
+            background: #FA0;
+            color: #000fff;
             justify-content: center;
             bottom: 15px;
-            color: aliceblue;
             left: 20%;
             right: 20%;
+            width: 60%;
             border-radius: 15px;
             padding-top: 0;
+            opacity: 50%;
         }
 
         .aside_lst {
@@ -121,7 +122,17 @@
             list-style: none;
             position: relative;
             background-color: #181818;
-            padding: 12px 20px;
+            padding: 0;
+
+        }
+        header {
+            margin-left: 0;
+        }
+        #logoAndCompany {
+            width: 70%;
+        }
+        #logo {
+          width: 200px;
         }
         .menu {display: flex;}
         .menu li {padding-left: 1px;}
@@ -141,6 +152,7 @@
             left: 0;
             width: 0;
             height: 1px;
+
             background-color: #FFF;
             transition: 0.15s ease-in-out;
         }
@@ -163,6 +175,7 @@
         }
         #check {display: none;}
         @media (max-width: 1240px) {
+
            section {
                 padding-top: 100px;
                 display: flex;
@@ -177,9 +190,8 @@
             }
             .aside_lst_tablet_mobile {
                 visibility: visible;
-                width: 300px;
+                width: 100%;
                 height: 400px;
-                padding-left: 45%;
             }
             .info_paragraphs {
                 padding-left: 15px;
@@ -190,7 +202,11 @@
 
             .info_paragraphs {
                 float: right;
-                width: 450px
+                width: 50%;
+                padding: 0;
+            }
+            .scaled_image {
+                width: 50%;
             }
 
             .par_img {
@@ -212,6 +228,17 @@
             }
             .paragraph_li_pc {
                 height: 0;
+            }
+            .paragraph_li_mobile_lap {
+                padding-top: 35px;
+                padding-left: 0;
+                padding-right: 0;
+            }
+            #technologies {
+                float: none;
+                margin-left: auto;
+                margin-right: auto;
+                list-style-type: none;
             }
 
         }
@@ -230,15 +257,15 @@
             }
             .aside_lst_tablet_mobile {
                 visibility: visible;
-                width: 300px;
+                width: 100%;
                 height: 400px;
-                padding-left: 15px;
+                padding-left: 0;
                 list-style-type: none;
             }
             .info_paragraphs {
                 margin-left: 0;
-                padding-left: 15px;
-                width: 300px;
+                padding: 0;
+                width: 100%;
                 float: left;
             }
             article {
@@ -250,9 +277,13 @@
             }
             header {
                 gap: 5px;
+                flex-direction: row;
+            }
+            .paragraph_li_mobile_lap {
+                padding-top: 25px;
             }
             li {
-                padding: 15px;
+
                 font-size: 1em;
 
             }
@@ -267,9 +298,8 @@
                 height: 0;
             }
             .scaled_image {
-                width: 300px;
-                margin-right: 25px;
-                margin-left: 25px;
+                width: 100%;
+
             }
 
             #video_style {
@@ -278,9 +308,8 @@
                 height: 0;
             }
             #coockie {
-                left: 5px;
-                right: 5px;
-                width: 350px;
+                left: 5%;
+                right: 5%;
 
             }
             .menu {
@@ -295,6 +324,9 @@
                 z-index: 100;
                 background-color: #181818;
                 transition: all 0.2s ease-in-out;
+            }
+            #logoAndCompany {
+                width: 60%;
             }
             .menu li {margin-top: 40px;}
             .menu li a {padding: 10px;}
@@ -337,7 +369,7 @@
 
     <span style="display: flex; flex-direction: column">
         <aside class="aside_lst_tablet_mobile">
-                <ol class="info_paragraphs">
+                <ol class="info_paragraphs" id="technologies">
                     Top 5 technologies:
                     <li class="paragraph_li_mobile_lap">-Decision support systems</li>
                     <li class="paragraph_li_mobile_lap">-Virtual reality (VR)</li>
