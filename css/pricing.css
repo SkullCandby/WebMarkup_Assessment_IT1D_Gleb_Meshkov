@@ -98,7 +98,7 @@ table {
 
 }
 .menu {display: flex;}
-.menu .li {padding-left: 1px;}
+.menu .li {margin-top: 40px}
 .menu .li a {
     display: inline-block;
     text-decoration: none;
