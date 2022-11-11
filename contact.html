@@ -1,74 +1,67 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-
 </head>
 <body>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100;300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100;300&amp;display=swap" rel="stylesheet">
 <link href="css/contact.css" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <header>
-        <span id="logoAndCompany" style="flex-direction: column; gap: 5px;">
-        <img src="img/img_4.png" id="logo">
+    <article id="logoAndCompany" style="flex-direction: column; gap: 5px;">
+        <img src="img/img_4.png" id="logo" alt="">
         <h1 style="margin-bottom: 5px">Sport technology</h1>
         <h2 style="margin-top: 0;">We provide data</h2>
-    </span>
+    </article>
     <nav>
         <ul class='nav-bar'>
-            <input type='checkbox' id='check' />
-            <span class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="pricing.html">Pricing</a></li>
-                <li><a href="contact.html" style="background: chocolate">Contact</a></li>
-                <li><a href="product.html">Product</a></li>
-                <label for="check" class="close-menu">&equiv;</label>
-            </span>
-            <label for="check" class="open-menu" style="width: 50px; height: 50px">&equiv;</label>
+            <li class="li" style="display: flex; justify-content: space-around">
+                <input type='checkbox' id='check'>
+                <span class="menu" >
+                    <a class="li" href="index.html">Home</a>
+                    <a class="li" href="pricing.html">Pricing</a>
+                    <a class="li" href="contact.html">Contact</a>
+                    <a class="li" href="product.html" style="background: chocolate">Product</a>
+                    <label for="check" class="open-menu">≡</label>
+                </span>
+            </li>
+
+            <li class="li">
+                <label for="check" class="close-menu">≡</label>
+            </li>
         </ul>
     </nav>
 </header>
-
 <section>
-    <form method="post" action="contact.html" >
+    <form method="post" action="contact.html">
         <fieldset id="form_style">
-            <legend>Contact us</legend>
-            <input type="text" name="name" placeholder="Name">
-            <input type="email" name="email" placeholder="Email">
-            <textarea name="message"></textarea>
-            <input type="submit" name="send" value="Send">
+            <legend>Contact us</legend> <label><input type="text" name="name" placeholder="Name"></label> <label><input type="email" name="email" placeholder="Email"></label> <label>
+            <textarea name="message"></textarea></label> <input type="submit" name="send" value="Send">
         </fieldset>
     </form>
-    <span id="asides">
-        <aside id="product_1">
-            <article >
-                <a href="https://www.inholland.nl/" style="width: 100%">
-                    <img class="scaled_image"  src="img/img_12.png" id="img_1">
-                </a>
-            </article>
-        </aside>
-        <aside id="product_2">
-            <article >
-                <a href="https://www.inholland.nl/">
-                    <img class="scaled_image"  src="img/img_13.png" id="img_2">
-                </a>
-            </article>
-        </aside>
-        <aside id="product_3">
-            <article >
-                <a href="https://www.inholland.nl/">
-                    <img class="scaled_image"  src="img/img_14.png" id="img_3">
-                </a>
-            </article>
-        </aside>
-    </span>
+    <section id="products">
+    <aside id="product_1">
+        <article>
+            <span class="asides"><a href="https://www.inholland.nl/" style="width: 100%"><img class="scaled_image" src="img/img_12.png" id="img_1" alt="img_12"></a></span>
+        </article>
+    </aside>
+    <aside id="product_2">
+        <article>
+            <span class="asides"><a href="https://www.inholland.nl/"><img class="scaled_image" src="img/img_13.png" id="img_2" alt="img_13"></a></span>
+        </article>
+    </aside>
+    <aside id="product_3">
+        <article>
+            <span class="asides"><a href="https://www.inholland.nl/"><img class="scaled_image" src="img/img_14.png" id="img_3" alt="img_14"></a></span>
+        </article>
+    </aside>
+    </section>
 </section>
-
 <footer style="height: 100px">
-    <p>&#169; 2022 Gleb Meshkov</p>
+    <p>© 2022 Gleb Meshkov</p>
 </footer>
 <section id="coockie">
     <p>Cookie statement</p>

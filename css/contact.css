@@ -35,9 +35,9 @@ ul {
 
 }
 
-li {
+.li {
     padding: 15px;
-    font-size: 1.5em;
+    color: antiquewhite;
 }
 
 section {
@@ -93,8 +93,8 @@ table, th, td {
 
 }
 .menu {display: flex;}
-.menu li {padding-left: 1px;}
-.menu li a {
+.menu .li {padding-left: 1px;}
+.menu .li a {
     display: inline-block;
     text-decoration: none;
     color: #FFF;
@@ -104,7 +104,7 @@ table, th, td {
     text-transform: uppercase;
 
 }
-.menu li a::after {
+.menu .li a::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -114,7 +114,7 @@ table, th, td {
     background-color: #FFF;
     transition: 0.15s ease-in-out;
 }
-.menu li a:hover:after {width: 100%;}
+.menu .li a:hover:after {width: 100%;}
 .open-menu , .close-menu {
     position: absolute;
     color: #FFF;
@@ -181,6 +181,11 @@ form {
     justify-content: center;
     width: 100%;
 }
+#products {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+}
 #check {display: none;}
 @media (max-width: 1240px) {
     section {
@@ -245,17 +250,17 @@ form {
         gap: 5px;
         width: 250px;
     }
-    li {
-        padding: 15px;
-        font-size: 1em;
-
-    }
 
     .scaled_image {
         width: 100%;
 
     }
+    .li {
+        color: antiquewhite;
+        font-size: 1em;
+        padding: 0 0;
 
+    }
     .menu {
         flex-direction: column;
         align-items: center;
@@ -304,9 +309,7 @@ form {
         width: 250px;
         height: 150px;
     }
-    body {
-        font-size: 0.5em;
-    }
+
     .info_paragraphs {
         width: 250px;
     }
@@ -322,8 +325,8 @@ form {
     }
 
     #check {display: none}
-    .menu li {margin-top: 40px;}
-    .menu li a {padding: 10px;}
+    .menu .li {margin-top: 40px;}
+    .menu .li a {padding: 10px;}
     .open-menu , .close-menu {display: block;}
     #check:checked ~ .menu {left: 0;}
 

@@ -11,27 +11,37 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="css/pricing.css" rel="stylesheet">
 <header>
-        <span id="logoAndCompany" style="flex-direction: column; gap: 5px;">
-        <img src="img/img_4.png" id="logo">
+        <article id="logoAndCompany" style="flex-direction: column; gap: 5px;">
+        <img src="img/img_4.png" id="logo" alt="">
         <h1 style="margin-bottom: 5px">Sport technology</h1>
         <h2 style="margin-top: 0;">We provide data</h2>
-    </span>
+    </article>
     <nav>
+
         <ul class='nav-bar'>
-            <input type='checkbox' id='check' />
-            <span class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="pricing.html" style="background: chocolate">Pricing</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="product.html">Product</a></li>
-                <label for="check" class="close-menu">&equiv;</i></label>
-            </span>
-            <label for="check" class="open-menu">&equiv;</label>
+            <li class="li" style="display: flex; justify-content: space-around">
+                <input type='checkbox' id='check'>
+                <span class="menu" >
+
+                    <a class="li" href="index.html">Home</a>
+                    <a class="li" href="pricing.html">Pricing</a>
+                    <a class="li" href="contact.html">Contact</a>
+                    <a class="li" href="product.html" style="background: chocolate">Product</a>
+                    <label for="check" class="open-menu">≡</label>
+
+                </span>
+            </li>
+
+
+            <li class="li">
+                <label for="check" class="close-menu">≡</label>
+            </li>
         </ul>
+
     </nav>
 </header>
 
-<section>
+<section id="section">
     <table>
         <tr>
             <td>Name</td>
@@ -174,7 +184,7 @@
             <td>15 days;</td>
         </tr>
     </table>
-<span id="asides">
+<section id="asides">
     <aside id="product_1">
         <article >
             <a href="https://www.inholland.nl/">
@@ -196,7 +206,7 @@
             </a>
         </article>
     </aside>
-</span>
+</section>
 </section>
 
 <footer style="height: 100px">
