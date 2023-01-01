@@ -1,14 +1,30 @@
-header, #logoAndCompany{
+<!-- Contact CSS -->
 
+
+
+#logoAndCompany{
+    font-family: 'Notable';
     display: flex;
     flex-direction: column;
     height: 350px;
+
     margin-left: 15px;
-
-
-
 }
 
+h2, h1 {
+    font-family: 'Notable';
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    background: #181818;
+    color: #FFFFFF;
+    letter-spacing: 0.1em;
+    line-height: 2em;
+    word-indent: 1em;
+    word-spacing: 1em;
+ }
 footer {
     margin-top: 100px;
 }
@@ -26,10 +42,16 @@ footer {
     width: 250px;
     height: 160px;
     border-radius: 16px;
+
+    border-color: yellow;
+    border-style: solid;
+    border-width: 1px;
 }
 ul {
     list-style-type: none;
     display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
     gap: 25px;
     width: 800px;
 
@@ -37,7 +59,7 @@ ul {
 
 .li {
     padding: 15px;
-    color: antiquewhite;
+    color: #faebd7;
 }
 
 section {
@@ -54,12 +76,7 @@ section {
 
 }
 
-body {
-    font-family: 'Noto Sans Mono', monospace;
-    font-size: 1em;
-    background: #181818;
-    color: #FFFFFF;
-}
+
 table, th, td {
     border: 1px solid;
 }
@@ -78,9 +95,12 @@ table, th, td {
     border-radius: 15px;
     padding-top: 0;
     opacity: 50%;
+    z-index: 9999;
 }
 
 .nav-bar {
+
+    text-transform: uppercase;
     width: 100px;
     display: flex;
     justify-content: space-between;
@@ -95,7 +115,6 @@ table, th, td {
 .menu {display: flex;}
 .menu .li {padding-left: 1px;}
 .menu .li a {
-    display: inline-block;
     text-decoration: none;
     color: #FFF;
     text-align: center;
@@ -256,7 +275,7 @@ form {
 
     }
     .li {
-        color: antiquewhite;
+        color: #faeba6;
         font-size: 1em;
         padding: 0 0;
 
@@ -271,7 +290,7 @@ form {
         top: 0;
         left: -100%;
         z-index: 100;
-        background-color: #181818;
+        background-color: #feadb7;
         transition: all 0.2s ease-in-out;
     }
     #asides {
@@ -333,3 +352,13 @@ form {
 
 }
 
+.linkedin:hover {
+    color: blue;
+}
+.linkedin:active {
+  color: green;
+}
+
+span + p {
+    color: green;
+}
