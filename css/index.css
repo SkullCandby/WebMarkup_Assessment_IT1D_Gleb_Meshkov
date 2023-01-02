@@ -1,5 +1,4 @@
-<!-- Homepage CSS -->
-
+/* Homepage CSS */
 
 #logoAndCompany{
     font-family: 'Notable';
@@ -21,7 +20,6 @@ body {
     color: #FFFFFF;
     letter-spacing: 0.1em;
     line-height: 2em;
-    word-indent: 1em;
     word-spacing: 1em;
  }
 footer {
@@ -48,7 +46,6 @@ ul {
 }
 .pc_ol {
     list-style-type: none;
-    padding-top: 45%;
     padding-left: 50px;
 }
 .li {
@@ -78,7 +75,7 @@ article {
     /*border: 1px solid red;*/
 }
 .im {
-    width: 49%;
+    width: 40%;
 }
 .scaled_image {
 
@@ -99,7 +96,11 @@ article {
     color: antiquewhite;
 }
 
-
+#menu_pos {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+}
 
 #coockie {
     position: fixed;
@@ -157,7 +158,7 @@ header {
     width: 200px;
 }
 .menu {display: flex;}
-.menu. li {padding-left: 1px;}
+.menu .li {padding-left: 1px;}
 .menu .li a {
     text-decoration: none;
     color: #FFF;
@@ -254,7 +255,7 @@ header {
         height: 0;
     }
     .paragraph_li_mobile_lap {
-        padding-top: 100px;
+        padding-top: 35px;
         padding-left: 0;
         padding-right: 0;
     }
@@ -270,6 +271,12 @@ header {
 
 }
 @media (max-width: 480px) {
+    #menu_pos {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+
+    }
     #section {
         padding-top: 250px;
         display: flex;
@@ -307,7 +314,7 @@ header {
         flex-direction: row;
     }
     .paragraph_li_mobile_lap {
-        padding-top: 100px;
+        padding-top: 95px;
     }
     .li {
         color: antiquewhite;
@@ -358,6 +365,7 @@ header {
     #check {display: none}
     .open-menu , .close-menu {display: block;}
     #check:checked ~ .menu {left: 0;}
+    figure {margin: 0;}
 
 }
 
@@ -376,12 +384,10 @@ span + p {
 
 figure {
     border: solid 1px;
-    width: 50%;
     background: rgb(125, 125, 125);
 
 }
 figcaption {
     text-align: center;
     background: rgb(125, 125, 125);
-    width: 100%;
 }

@@ -1,6 +1,6 @@
-<!-- Pricing CSS -->
+/* Pricing page CSS */
 
-#logoAndCompany{
+#logoAndCompany {
     font-family: 'Notable';
     display: flex;
     flex-direction: column;
@@ -20,7 +20,6 @@ body {
     color: #FFFFFF;
     letter-spacing: 0.1em;
     line-height: 2em;
-    word-indent: 1em;
     word-spacing: 1em;
  }
 footer {
@@ -75,9 +74,7 @@ ul {
 }
 
 .scaled_image {
-
     height: 350px;
-
 }
 
 
@@ -153,7 +150,7 @@ table {
     top: 20px;
     left: 20px;
 }
-#check {display: block; z-index: 1000}
+#check {display: block; z-index: 1000;}
 
 #product_1 {
     float: left;
@@ -178,7 +175,7 @@ table {
 #check {display: none;}
 
 aside > p {
-    color: browm;
+    color: #964B00;
 }
 span + p {
     color: green;
@@ -206,6 +203,11 @@ tr {
 }
 tr:nth-child(2n) {
   background-color: #CFF;
+}
+#menu_pos {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
 }
 @media (max-width: 1240px) {
 
@@ -294,9 +296,14 @@ tr:nth-child(2n) {
     }
     tr:nth-child(2n) {
       background-color: #CFF;
+      }
 }
 @media (max-width: 480px) {
-
+    #menu_pos {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
     header {
         gap: 5px;
         width: 250px;
@@ -409,32 +416,28 @@ tr:nth-child(2n) {
     }
     tr:nth-child(2n) {
       background-color: #CFF;
-
+    }
 }
-
-@media (min-width: 1241px) {
-    thead {
-        background: #FFC72B;
-        color: black;
-        font-weight: bold;
-    }
-
-    .linkedin:hover {
-        color: blue;
-    }
-    .linkedin:active {
-      color: green;
-    }
-    tr td:first-child {
-        background-color: #FF0;
-    }
-    table {
-        color: green;
-    }
-    tr {
-        background: #FFF;
-    }
-    tr:nth-child(2n) {
-      background-color: #CFF;
-    }
+thead {
+    background: #FFC72B;
+    color: black;
+    font-weight: bold;
+}
+.linkedin:hover {
+    color: blue;
+}
+.linkedin:active {
+  color: green;
+}
+tr td:first-child {
+    background-color: #FF0;
+}
+table {
+    color: green;
+}
+tr {
+    background: #FFF;
+}
+tr:nth-child(2n) {
+  background-color: #CFF;
 }

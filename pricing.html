@@ -5,6 +5,7 @@
     <meta name="author" content="Gleb Meshkov" />
     <meta name="description" content="This website was made as a web markup assignment for Inholland University of Applied Science.  " />
     <meta name="keywords" content="Inholland, Web Markup, Sports, Applied Sciend, AR" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pricing</title>
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
 
@@ -13,37 +14,34 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100;300&display=swap" rel="stylesheet">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="css/pricing.css" rel="stylesheet" type="text/css">
-<header>
-    <article id="logoAndCompany" style="flex-direction: column; gap: 5px;">
-        <img title="logo" src="img/img_4.png" id="logo" alt="">
-        <h1 style="margin-bottom: 5px">Sport technology</h1>
-        <h2 style="margin-top: 0;">We provide data</h2>
+<header style="width: 100%">
+    <article id="menu_pos">
+        <article id="logoAndCompany" style="flex-direction: column; gap: 5px;">
+            <img title="logo" src="img/img_4.png" id="logo" alt="">
+            <h1 style="margin-bottom: 5px">Sport technology</h1>
+            <h2 style="margin-top: 0;">We provide data</h2>
+
+        </article>
+        <nav>
+            <ul class='nav-bar'>
+                <li class="li" style="display: flex; justify-content: space-around">
+                    <input type='checkbox' id='check'>
+                    <span class="menu">
+                        <a class="li" href="index.html">Home</a>
+                        <a class="li" href="pricing.html" style="background: chocolate">Pricing</a>
+                        <a class="li" href="contact.html"><strong>Contact</strong></a>
+                        <a class="li" href="product.html">Products</a>
+                        <label for="check" class="open-menu">≡</label>
+                    </span>
+                </li>
+
+                <li class="li">
+                    <label for="check" class="close-menu">≡</label>
+                </li>
+            </ul>
+        </nav>
     </article>
-    <nav>
-
-        <ul class='nav-bar'>
-            <li class="li" style="display: flex; justify-content: space-around">
-                <input type='checkbox' id='check'>
-                <span class="menu">
-
-                    <a class="li" href="index.html">Home</a>
-                    <a class="li" href="pricing.html" style="background: chocolate"><strong>Pricing</strong></a>
-                    <a class="li" href="contact.html">Contact</a>
-                    <a class="li" href="product.html">Products</a>
-                    <label for="check" class="open-menu">≡</label>
-
-                </span>
-            </li>
-
-
-            <li class="li">
-                <label for="check" class="close-menu">≡</label>
-            </li>
-        </ul>
-
-    </nav>
 </header>
 
 <section id="section">

@@ -1,13 +1,10 @@
-<!-- Contact CSS -->
+/* Contact page CSS */
 
-
-
-#logoAndCompany{
+#logoAndCompany {
     font-family: 'Notable';
     display: flex;
     flex-direction: column;
     height: 350px;
-
     margin-left: 15px;
 }
 
@@ -22,7 +19,6 @@ body {
     color: #FFFFFF;
     letter-spacing: 0.1em;
     line-height: 2em;
-    word-indent: 1em;
     word-spacing: 1em;
  }
 footer {
@@ -206,6 +202,13 @@ form {
     margin-top: 0;
 }
 #check {display: none;}
+
+#menu_pos {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
 @media (max-width: 1240px) {
     section {
         margin-top: 150px
@@ -234,9 +237,9 @@ form {
         width: 0;
     }
     #coockie {
-        margin-left: 10%;
-        margin-right: 10%;
-        width: 40%;
+        margin-left: 0;
+        margin-right: 20%;
+        width: 60%;
     }
     header {
         flex-direction: column;
@@ -290,7 +293,7 @@ form {
         top: 0;
         left: -100%;
         z-index: 100;
-        background-color: #feadb7;
+        background-color: #181818;
         transition: all 0.2s ease-in-out;
     }
     #asides {
@@ -348,8 +351,15 @@ form {
     .menu .li a {padding: 10px;}
     .open-menu , .close-menu {display: block;}
     #check:checked ~ .menu {left: 0;}
+    h2 h1 {
+        font-size: 0.5em;
+    }
+    #menu_pos {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
 
-
+    }
 }
 
 .linkedin:hover {
