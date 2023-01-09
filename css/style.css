@@ -407,7 +407,7 @@
 .linkedin:active {
   color: green;
 }
-.index_article #index_brown > p {
+#index_brown > p {
     color: #d6dbc1;
 }
 span + p {
